@@ -31,10 +31,10 @@ const App = () => {
       <h1 style={{textShadow:'-3px 3px 0 #789bbd,3px 3px 0 #789bbd,3px -3px 0 #789bbd,-3px -3px 0 #789bbd'}}>weather</h1>
       hover over the icon for more information
       <div className='data' style={{textAlign:'left', padding:'1em 0 1em 1em'}}>
-      sunrise {new Date(weather.current.sunrise*1000).toString().split(' ')[4]},&#160;
-      sunset {new Date(weather.current.sunset*1000).toString().split(' ')[4]},&#160;
-      length of the day is {lenghtOfTheDay(weather)},&#160;
-      moonrise {new Date(weather.daily[0].moonrise*1000).toString().split(' ')[4]},&#160;
+      sunrise {new Date(weather.current.sunrise*1000).toString().split(' ')[4]}&#160;&#160;-&#160;&#160;
+      sunset {new Date(weather.current.sunset*1000).toString().split(' ')[4]}&#160;&#160;-&#160;&#160;
+      length of the day is {lenghtOfTheDay(weather)}&#160;&#160;-&#160;&#160;
+      moonrise {new Date(weather.daily[0].moonrise*1000).toString().split(' ')[4]}&#160;&#160;-&#160;&#160;
       moonset {new Date(weather.daily[0].moonset*1000).toString().split(' ')[4]}
       </div>
       <div style={{display:'grid',gridTemplateColumns:'20em 1fr'}}>

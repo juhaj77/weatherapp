@@ -12,13 +12,16 @@ const Daily = (props) =>
                 <div className='CellDetails'>
                     <span style={{fontWeight:'750',whiteSpace:'nowrap'}}>{d.weather[0].description}</span><br/>
                     {d.summary}
-                    <ul style={{listStyleType:'none',textAlign:'left'}}>
-                        <li><span style={{whiteSpace:'nowrap'}}>feels like {(d.feels_like.day - 273.15).toFixed(2)}&deg;C</span></li>
-                        <li><span style={{whiteSpace:'nowrap'}}>dew point {(d.dew_point - 273.15).toFixed(2)}&deg;C</span></li>
-                        <li><span style={{whiteSpace:'nowrap'}}>humidity {d.humidity}%</span></li>
-                        <li><span style={{whiteSpace:'nowrap'}}>pressure {d.pressure}kPa</span></li>
-                        <li><span style={{whiteSpace:'nowrap'}}>wind speed {d.wind_speed}m/s</span></li>
-                    </ul>
+                    <table style={{lineHeight:'1em', margin:'1em'}}>
+                        <tbody>
+                        <tr><td style={{whiteSpace:'nowrap',textAlign:'right'}}>feels like</td><td style={{paddingLeft:'1em',textAlign:'left'}}>{(d.feels_like.day - 273.15).toFixed(2)}&deg;C</td></tr>
+                        <tr><td style={{whiteSpace:'nowrap',textAlign:'right'}}>dew point</td><td style={{paddingLeft:'1em',textAlign:'left'}}>{(d.dew_point - 273.15).toFixed(2)}&deg;C</td></tr>
+                        <tr><td style={{whiteSpace:'nowrap',textAlign:'right'}}>humidity</td><td style={{paddingLeft:'1em',textAlign:'left'}}>{d.humidity}%</td></tr>
+                        <tr><td style={{whiteSpace:'nowrap',textAlign:'right'}}>pressure</td><td style={{paddingLeft:'1em',textAlign:'left'}}>{d.pressure}kPa</td></tr>
+                        <tr><td style={{whiteSpace:'nowrap',textAlign:'right'}}>wind speed</td><td style={{paddingLeft:'1em',textAlign:'left'}}>{d.wind_speed}m/s</td></tr>
+                        <tr><td style={{whiteSpace:'nowrap',textAlign:'right'}}>wind gust</td><td style={{paddingLeft:'1em',textAlign:'left'}}>{d.wind_gust}m/s</td></tr>
+                        </tbody>
+                    </table>
                 </div>
                 </td>)}
             </tr>
