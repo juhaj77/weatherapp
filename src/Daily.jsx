@@ -1,5 +1,5 @@
 const Daily = (props) => 
-<div className='data' style={{display:'inline-block',marginLeft:'1em'}}>
+<div className='data' style={{display:'inline-block'}}>
      <h4 style={{paddingLeft:'1em',textAlign:'left'}}>daily forecast</h4>
     <div style={{display:'flex',flexWrap:'wrap'}}>
                 {props.hourly.map((d,i) => <div key={i} className='td CellWithDetails' style={{padding:'.5em'}}>

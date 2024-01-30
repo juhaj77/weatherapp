@@ -1,5 +1,5 @@
 const Current = ({ weather, geo }) => 
-<div className='data' style={{display:'inline-block',padding:'0 .15em .1em .15em'}}>
+<div className='data' style={{marginRight:'1em', display:'inline-block',padding:'0 .15em .1em .15em'}}>
 <h4 style={{paddingLeft:'1em',textAlign:'left'}}>{new Date(weather.current.dt*1000).toString().split(" ")[4]} weather in {geo[0].name}</h4>
   <div className='data' style={{marginBottom:'0', paddingTop:'1em'}}>
     {weather.current.weather[0].description}
