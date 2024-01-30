@@ -1,5 +1,5 @@
 # weatherapp
-React app that uses OpenWeatherMap API. Todo RWD.
+React app that uses OpenWeatherMap API.
 ### try it    
 [app on Render](https://weatherapp-fzjj.onrender.com/)     
 ## Installing
