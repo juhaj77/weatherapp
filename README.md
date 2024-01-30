@@ -1,7 +1,7 @@
 # weatherapp
 React app that uses OpenWeatherMap API
 ### try it    
-https://weatherapp-fzjj.onrender.com/     
+[app on render](https://weatherapp-fzjj.onrender.com/)     
 ## Installing
 ```
 .../weatherapp>npm install
