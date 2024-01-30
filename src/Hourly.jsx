@@ -1,4 +1,4 @@
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 const Hourly = (props) => {
     const data = props.hourly.map(d => ({h: new Date(d.dt*1000).toString().split(" ")[4].split(":")[0],
@@ -30,13 +30,15 @@ const Hourly = (props) => {
                     </div>)}
         </div>
         <div style={{background:'#789bbd', paddingTop:'1.5em', border:'6px rgb(35, 33, 43) solid'}}>
-        <LineChart width={1100} height={200} data={data}>
-            <CartesianGrid stroke="#434c55" />
-            <XAxis tick={{ fill: 'black' }} dataKey="h" />
-            <Tooltip/>
-            <YAxis tick={{ fill: 'black' }} domain={[min,max]}/>
-            <Line strokeWidth={2} type="monotone" dataKey="temp" stroke="black" dot={true} />
-        </LineChart>
+        <ResponsiveContainer width="98%" height={200}>
+            <LineChart data={data}>
+                <CartesianGrid stroke="#434c55" />
+                <XAxis tick={{ fill: 'black' }} dataKey="h" />
+                <Tooltip/>
+                <YAxis tick={{ fill: 'black' }} domain={[min,max]}/>
+                <Line strokeWidth={2} type="monotone" dataKey="temp" stroke="black" dot={true} />
+            </LineChart>
+        </ResponsiveContainer>
         </div>
     </div>
 }
