@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import { useField } from './hooks/field'
 import Hourly from './Hourly'
 import Daily from './Daily'
 import Current from './Current'
