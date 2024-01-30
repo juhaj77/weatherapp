@@ -1,10 +1,8 @@
 const Daily = (props) => 
 <div className='data' style={{display:'inline-block',marginLeft:'1em'}}>
      <h4 style={{paddingLeft:'1em',textAlign:'left'}}>daily forecast</h4>
-    <table style={{margin:'auto'}}>
-        <tbody>
-            <tr>
-                {props.hourly.map((d,i) => <td key={i} className='td CellWithDetails' style={{padding:'.5em'}}>
+    <div style={{display:'flex',flexWrap:'wrap'}}>
+                {props.hourly.map((d,i) => <div key={i} className='td CellWithDetails' style={{padding:'.5em'}}>
                 <img width='80' src={`https://openweathermap.org/img/w/${d.weather[0].icon}.png`} alt='icon' />
                 <br/>
                 <span style={{fontSize:'1em'}}>{(d.temp.day - 273.15).toFixed(2)}&deg;C</span><br/>
@@ -23,10 +21,8 @@ const Daily = (props) =>
                         </tbody>
                     </table>
                 </div>
-                </td>)}
-            </tr>
-        </tbody>
-    </table>
+                </div>)}
+                </div>
 </div>
 
 

@@ -8,10 +8,8 @@ const Hourly = (props) => {
     const min = Math.min(...values)
     return <div className='data'>
         <h4 style={{paddingLeft:'1em',textAlign:'left'}}>hourly forecast</h4>
-        <table style={{margin:'auto'}}>
-            <tbody>
-                <tr>
-                    {props.hourly.map((d,i) => <td key={i} className="td CellWithDetails" style={{padding:'.5em'}}>
+        <div style={{display:'flex',justifyContent:'center', flexWrap:'wrap'}}>
+                    {props.hourly.map((d,i) => <div key={i} className="td CellWithDetails" style={{padding:'.5em'}}>
                     <img width='40' src={`https://openweathermap.org/img/w/${d.weather[0].icon}.png`} alt='icon' />
                     <br/>
                     <span style={{fontSize:'.8em'}}>{(d.temp - 273.15).toFixed(2)}&deg;C</span><br/>
@@ -29,10 +27,8 @@ const Hourly = (props) => {
                         </tbody>
                     </table>
                     </div>
-                    </td>)}
-                </tr>
-            </tbody>
-        </table>
+                    </div>)}
+        </div>
         <div style={{background:'#789bbd', paddingTop:'1.5em', border:'6px rgb(35, 33, 43) solid'}}>
         <LineChart width={1100} height={200} data={data}>
             <CartesianGrid stroke="#434c55" />

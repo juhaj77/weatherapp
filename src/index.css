@@ -12,9 +12,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-body {
-  background-color: #262a35;
-}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -25,6 +23,7 @@ a:hover {
 }
 
 body {
+  background-color: #262a35;
   margin: 0;
   display: flex;
   place-items: top;

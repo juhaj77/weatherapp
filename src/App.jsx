@@ -48,7 +48,7 @@ const App = () => {
       moonrise {new Date(weather.daily[0].moonrise*1000).toString().split(' ')[4]}&#160;&#160;-&#160;&#160;
       moonset {new Date(weather.daily[0].moonset*1000).toString().split(' ')[4]}
       </div>
-      <div style={{display:'grid',gridTemplateColumns:'20em 1fr'}}>
+      <div style={{display:'flex', flexWrap:'wrap'}}>
         <Current weather={weather} geo={geo}/>
         <Daily hourly={weather.daily}/>
       </div>
