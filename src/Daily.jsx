@@ -1,7 +1,7 @@
 const Daily = (props) => 
 <div className='data' style={{display:'inline-block'}}>
      <h4 style={{paddingLeft:'1em',textAlign:'left'}}>daily forecast</h4>
-    <div style={{display:'flex',flexWrap:'wrap'}}>
+    <div style={{display:'flex',flexWrap:'wrap',justifyContent:'center'}}>
                 {props.hourly.map((d,i) => <div key={i} className='td CellWithDetails' style={{padding:'.5em'}}>
                 <img width='80' src={`https://openweathermap.org/img/w/${d.weather[0].icon}.png`} alt='icon' />
                 <br/>
