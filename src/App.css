@@ -69,3 +69,24 @@
 .CellWithDetails:hover div.CellDetails{
   display:block;
 }
+.tabs {
+  display:inline-flex;
+  background-color:#262a35;
+  display:flex;
+  width:100%;
+}
+.active {
+  padding-left:2em;
+  padding-right:2em;
+  background:#789bbd;
+  color:black;
+}
+.passive {
+  border-left:solid 1px rgb(68, 68, 68);
+  border-top:solid 1px rgb(68, 68, 68);
+  padding-left:2em;
+  padding-right:2em;
+  background:rgb(35, 33, 43);
+  color:white;
+  cursor: pointer;
+}

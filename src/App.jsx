@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import Hourly from './Hourly'
 import Daily from './Daily'
 import Current from './Current'
+import Graph from './Graph'
 import './App.css'
 
 const App = () => {
@@ -53,6 +54,7 @@ const App = () => {
         <Daily hourly={weather.daily}/>
       </div>
       <Hourly hourly={weather.hourly.slice(0,18)}/>
+      <Graph hourly={weather.hourly.slice(0,18)} />
     </>
   
 }
