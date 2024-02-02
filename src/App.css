@@ -1,6 +1,7 @@
 #root {
   margin: 0 auto;
   padding: 2rem;
+  padding-top:0;
   text-align: center;
   min-width:320px;
 }
@@ -76,16 +77,16 @@
   width:100%;
 }
 .active {
-  padding-left:2em;
-  padding-right:2em;
+  padding-left:1em;
+  padding-right:1em;
   background:#789bbd;
   color:black;
 }
 .passive {
   border-left:solid 1px rgb(68, 68, 68);
   border-top:solid 1px rgb(68, 68, 68);
-  padding-left:2em;
-  padding-right:2em;
+  padding-left:1em;
+  padding-right:1em;
   background:rgb(35, 33, 43);
   color:white;
   cursor: pointer;
