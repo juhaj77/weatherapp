@@ -46,14 +46,14 @@ const Graph = (props) => {
     const tempMin = Math.min(...tempValues)
 
     const humidity = props.hourly.map(d => ({h: new Date(d.dt*1000).toString().split(" ")[4].split(":")[0],
-                                            humidity: d.humidity.toFixed(2)}))
-    const humidityValues = props.hourly.map(d => d.humidity.toFixed(2))
+                                            humidity: d.humidity}))
+    const humidityValues = props.hourly.map(d => d.humidity)
     const humidityMax = Math.max(...humidityValues)
     const humidityMin = Math.min(...humidityValues)
 
     const pressure = props.hourly.map(d => ({h: new Date(d.dt*1000).toString().split(" ")[4].split(":")[0],
-                                            pressure: d.pressure.toFixed(2)}))
-    const pressureValues = props.hourly.map(d => d.pressure.toFixed(2))
+                                            pressure: d.pressure}))
+    const pressureValues = props.hourly.map(d => d.pressure)
     const pressureMax = Math.max(...pressureValues)
     const pressureMin = Math.min(...pressureValues)
 
