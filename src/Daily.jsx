@@ -6,7 +6,7 @@ const Daily = (props) =>
                 <img width='80' src={`https://openweathermap.org/img/w/${d.weather[0].icon}.png`} alt='icon' />
                 <br/>
                 <span style={{fontSize:'1em'}}>{(d.temp.day - 273.15).toFixed(2)}&deg;C</span><br/>
-                {new Date(d.dt*1000).toString().split(" ")[2]}.
+                <span style={{fontWeight:'800', color:'#c2f2ffaa'}}>{new Date(d.dt*1000).toString().split(" ")[2]}.</span>
                 <div className='CellDetails'>
                     <span style={{fontWeight:'750',whiteSpace:'nowrap'}}>{d.weather[0].description}</span><br/>
                     {d.summary}

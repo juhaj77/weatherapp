@@ -10,7 +10,7 @@ const Hourly = (props) => {
                     <img width='40' src={`https://openweathermap.org/img/w/${d.weather[0].icon}.png`} alt='icon' />
                     <br/>
                     <span style={{fontSize:'.8em'}}>{(d.temp - 273.15).toFixed(2)}&deg;C</span><br/>
-                    {new Date(d.dt*1000).toString().split(" ")[4].split(":")[0]}
+                    <span style={{fontWeight:'800', color:'#c2f2ffaa'}}>{new Date(d.dt*1000).toString().split(" ")[4].split(":")[0]}</span>
                     <div className='CellDetails'>
                         <span style={{whiteSpace:'nowrap'}}>{d.weather[0].description}</span><br/>
                         <table style={{lineHeight:'1em', margin:'1em'}}>
